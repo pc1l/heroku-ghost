@@ -38,7 +38,10 @@ config = {
             host: '0.0.0.0',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: process.env.PORT || 5000,
-        }
+        },
+        
+        fileStorage: false
+        
     },
 
     // ### Development **(default)**
