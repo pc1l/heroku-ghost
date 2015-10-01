@@ -10,7 +10,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: process.env.MYURL,
+        url: process.env.MY_URL,
         mail: {
 			transport: 'SMTP',
 			options: {
@@ -24,13 +24,13 @@ config = {
 	database: {
             client: 'postgres',
             connection: {
-                host     : 'process.env.SQLHOST', //输入数据库地址
-                user     : 'process.env.SQLUSER', //输入数据库用户
-                password : 'process.env.SQLPASS', //输入你的 MySQL 密码
-                database : 'process.env.SQLNAME', //输入数据库名称
+                host     : 'process.env.SQL_HOST', //输入数据库地址
+                user     : 'process.env.SQL_USER', //输入数据库用户
+                password : 'process.env.SQL_PASS', //输入你的 MySQL 密码
+                database : 'process.env.SQL_NAME', //输入数据库名称
                 port: '5432'
             },
-	dubug: false,
+	    dubug: false,
         },
 
         server: {
