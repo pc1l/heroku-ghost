@@ -10,7 +10,7 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'https://ghostes.herokuapp.com',
+        url: process.env.MYURL,
         mail: {
 			transport: 'SMTP',
 			options: {
@@ -21,16 +21,16 @@ config = {
 				},
 			},
 		},
-		database: {
-            client: 'mysql',
+	database: {
+            client: 'postgres',
             connection: {
-                host     : 'us-iron-auto-dca-03-a.cleardb.net', //输入数据库地址
-                user     : 'b80982bac38ca4', //输入数据库用户
-                password : '63c4acfa', //输入你的 MySQL 密码
-                database : 'heroku_100ce939f81fe66', //输入数据库名称
-                charset  : 'utf8'
+                host     : 'process.env.SQLHOST', //输入数据库地址
+                user     : 'process.env.SQLUSER', //输入数据库用户
+                password : 'process.env.SQLPASS', //输入你的 MySQL 密码
+                database : 'process.env.SQLNAME', //输入数据库名称
+                port: '5432'
             },
-			dubug: false,
+	dubug: false,
         },
 
         server: {
