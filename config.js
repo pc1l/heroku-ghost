@@ -39,9 +39,19 @@ config = {
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: process.env.PORT || 5000,
         },
-        
-        fileStorage: false
-        
+
+        fileStorage: false,
+
+        // storage: {
+        //    active: 'ghost-cloudinary-store',
+        //    'ghost-cloudinary-store': {
+        //        cloud_name: process.env.CI_NAME,
+        //        api_key: process.env.CI_API_KEY,
+        //        api_secret: process.env.CI_API_SECRET
+        //    }
+        // }
+
+
     },
 
     // ### Development **(default)**
