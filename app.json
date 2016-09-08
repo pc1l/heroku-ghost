@@ -1,0 +1,35 @@
+{
+  "name": "heroku-ghost",
+  "scripts": {
+  },
+  "env": {
+    "MY_URL": {
+      "required": true
+    },
+    "SQL_HOST": {
+      "required": true
+    },
+    "SQL_NAME": {
+      "required": true
+    },
+    "SQL_PORT": {
+      "required": true
+    },
+    "SQL_USER": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
